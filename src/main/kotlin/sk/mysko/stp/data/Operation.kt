@@ -1,0 +1,27 @@
+package sk.mysko.stp.data
+
+enum class Operation {
+    HEX_TO_STRING,
+    STRING_TO_HEX,
+    BIN_TO_STRING,
+    STRING_TO_BIN,
+    OCT_TO_STRING,
+    STRING_TO_OCT,
+    BASE_64_ENCODE,
+    BASE_64_DECODE,
+    URL_ENCODE,
+    URL_DECODE,
+    HTML_ENCODE,
+    HTML_DECODE,
+    ROT13,
+    CRC32,
+    LUHN_DIGIT_GENERATOR,
+    MD5_HASH,
+    SHA1_HASH,
+    SHA256_HASH,
+    SHA384_HASH,
+    SHA512_HASH,
+    SHA3_256_HASH,
+    SHA3_384_HASH,
+    SHA3_512_HASH
+}
