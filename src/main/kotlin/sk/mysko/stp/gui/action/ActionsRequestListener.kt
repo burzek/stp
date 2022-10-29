@@ -1,6 +1,6 @@
 package sk.mysko.stp.gui.action
 
-sealed interface ActionsRequestListener {
+interface ActionsRequestListener {
 
     fun transformationRequested() : Unit;
     fun exitRequested() : Unit;

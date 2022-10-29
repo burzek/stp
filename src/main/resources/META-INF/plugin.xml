@@ -5,18 +5,62 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Stp</name>
+    <name>StringToolsPlugin2.0</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="boris.brinza@gmail.com" url="https://www.linkedin.com/in/boris-brinza-5768846/">mysko.sk</vendor>
+
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-  ]]></description>
+      Handy string tools<br>
+      <small>Handy string tools for converting (hex, binary, oct), encoding/decoding (URL, HTML, Base64) and computing HASH/CRCs.</small>
+      ]]></description>
+
+    <change-notes><![CDATA[
+            v2.0
+            <small>
+                <ul>Added new operations
+                   <li>ASCII/OCT conversions</li>
+                   <li>ROT13</li>
+                   <li>MD5 hash</li>
+                   <li>SHA256 hash</li>
+                   <li>SHA512 hash</li>
+                   <li>CRC32 checksum</li>
+                   <li>LUHN digit generator</li>
+                </ul>
+            </small>
+            <br>
+            v3.0
+            <small>
+              <ul>ttt
+                <li>Fixed errors</li>
+                <li>Description in status bar is displayed for invalid input or error</li>
+              </ul>
+            </small>
+            <br>
+            v4.0
+            <small>
+              <ul>
+                <li>Fixed internal errors</li>
+                <li>Url endode/decode is rewritten based on rfc3986 Percent-Encoding</li>
+                <li>Dialog can be closed by ESC key
+              </ul>
+            </small>
+            <br>
+            v5.0
+            <small>
+              <ul>
+                <li>Kotlin</li>
+                <li>UI redisign</li>
+                <li>new SHA3 hashes</li>
+              </ul>
+            </small>
+
+          ]]>
+    </change-notes>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -25,6 +69,14 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
     </extensions>
+
+
+    <actions>
+        <action class="sk.mysko.stp.StringToolsPluginAction" id="StringTools"
+                text="String Tools">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut first-keystroke="control shift S" second-keystroke="T" keymap="$default"/>
+        </action>
+    </actions>
 </idea-plugin>

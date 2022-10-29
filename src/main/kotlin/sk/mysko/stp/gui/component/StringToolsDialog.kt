@@ -8,10 +8,10 @@ import com.intellij.ui.KeyStrokeAdapter
 import java.awt.event.KeyEvent
 
 class StringToolsDialog(private var project: Project?) : DialogBuilder() {
-    //private var mainPanel: MainPanel? = null
+    private val mainPanel: MainPanel =  initialize()
 
     init {
-        initialize()
+        private var mainPanel: MainPanel = initialize()
     }
 
     private fun getProject(): Project? {
@@ -53,7 +53,7 @@ class StringToolsDialog(private var project: Project?) : DialogBuilder() {
         }
     }
 
-//    fun getMainPanel(): MainPanel? {
-//        return mainPanel
-//    }
+    fun getMainPanel(): MainPanel {
+        return mainPanel
+    }
 }

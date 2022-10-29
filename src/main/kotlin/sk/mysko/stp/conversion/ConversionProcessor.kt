@@ -12,7 +12,7 @@ class ConversionProcessor {
         this.dataProvider = dataProvider
     }
 
-    fun doConversion(): ConversionData? {
+    fun doConversion(): ConversionData {
         TODO()
 //        val data: ConversionData? = dataProvider?.getConversionData()
 //        val converter: Converter = ConversionFactory.getConverter(data.getOperation())
